@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+    border-bottom: 2px solid #ff6347;
+}
+
+.section {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.home {
+    background: url('https://media.licdn.com/dms/image/D4D12AQEw05YPKmleOw/article-cover_image-shrink_720_1280/0/1673599204911?e=2147483647&v=beta&t=S8Y5eOaqmUeqpvuJZkc6LOIJHH5znPLOGmrPEmeF_6w') no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.home .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.about, .services, .portfolio, .contact {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+}
+
+.service-box, .portfolio-item {
+    margin: 2rem 0;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover, .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 0.8rem 2rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #e5533d;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.section {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.service-box, .portfolio-item {
+    animation: slideIn 1s ease-out;
+}
